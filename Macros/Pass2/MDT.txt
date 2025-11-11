@@ -1,0 +1,5 @@
+INCR1 &FIRST,&SECOND
+A 1,#0
+L 2,#1
+ST 1,#0
+MEND

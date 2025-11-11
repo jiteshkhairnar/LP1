@@ -1,0 +1,21 @@
+MACRO
+INCR1 &FIRST,&SECOND
+A 1,&FIRST
+L 2,&SECOND
+ST 1,&FIRST
+MEND
+MACRO
+INCR2 &ARG1,&ARG2
+L 3,&ARG1
+ST 4,&ARG2
+MEND
+PRG2        START
+            USING                   *,14
+            SR  1,1
+            INCR1                   FOUR,FIVE
+            INCR2                   FIVE,FOUR
+FOUR        DC                      F'4'
+FIVE        DC                      F'5'
+TEMP        DS                      1F
+            SR 2,2
+            END
